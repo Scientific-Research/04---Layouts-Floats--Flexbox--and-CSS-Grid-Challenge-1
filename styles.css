@@ -34,17 +34,18 @@ body {
 
 .chuck-image {
   float: left;
-  margin-right: 40px;
+  /* margin-right: 40px; */
 }
 
 .section {
   float: left;
-  width: 250px;
+  width: 240px;
+  margin-left: 40px;
 }
 
 .section-2 {
   float: left;
-  margin-left: 30px;
+  margin-left: 40px;
   width: 240px;
   margin-top: -15px;
 }

@@ -37,6 +37,18 @@ body {
   margin-right: 40px;
 }
 
+.section {
+  float: left;
+  width: 250px;
+}
+
+.section-2 {
+  float: left;
+  margin-left: 30px;
+  width: 240px;
+  margin-top: -15px;
+}
+
 /* OR using Pseudo element ::before - in this case, we don't need the paragraph for SALE ih HTML anymore, that's why i commented that in HTML out!*/
 /* article::before {
   content: "S A L E";
@@ -117,18 +129,23 @@ h4 {
 .price {
   font-weight: 700;
   font-size: x-large;
+  float: left;
+  margin-right: 70px;
+  margin-top: 10px;
 }
 
 .free-shipping {
   text-transform: uppercase;
-  font-size: small;
+  font-size: 12px;
   font-weight: bolder;
   color: #777;
   margin-bottom: 20px;
+  margin-top: 19px;
 }
 
 .dress-up {
   margin-bottom: 7px;
+  text-wrap: wrap;
 }
 
 /* .more-info {
@@ -138,6 +155,7 @@ h4 {
 .product-details {
   margin-top: 30px; /*because margin-bottom for ancher as inline element doesn't work, unless we change display from inline to inlie-block as i did below in a:link, a:visited*/
   margin-bottom: 10px;
+  margin-left: 5px;
 }
 
 button {
@@ -182,4 +200,5 @@ ul li {
   list-style: square;
   margin-left: 20px;
   padding: 5px;
+  text-wrap: wrap;
 }

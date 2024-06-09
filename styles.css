@@ -32,6 +32,11 @@ body {
   letter-spacing: 3px;
 }
 
+.chuck-image {
+  float: left;
+  margin-right: 40px;
+}
+
 /* OR using Pseudo element ::before - in this case, we don't need the paragraph for SALE ih HTML anymore, that's why i commented that in HTML out!*/
 /* article::before {
   content: "S A L E";

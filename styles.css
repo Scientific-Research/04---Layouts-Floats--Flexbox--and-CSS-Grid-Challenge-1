@@ -1,0 +1,179 @@
+* {
+  font-family: sans-serif;
+  line-height: 1.4;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+}
+
+.sale {
+  /* to put the SALE at the top using Absolute positioning:*/
+  background-color: #ec2f2f;
+  color: #fff;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 7px 15px;
+  /* We will have a good shape for cartesian if padding for right and left sides twice of padding for top and down! => 15px is twice of 7px */
+  display: inline-block;
+
+  /* instead of using display: inline-block; we can use the following statements, they do the same: but the preferable is to use the display: inline-block; */
+  /* width: 40px; */
+  /* text-align: center; */
+
+  position: absolute;
+  top: -17px;
+  left: -38px; /*it is always good to have one twice of aonther one => -34 is twice of -17*/
+
+  /*to make space between letters in SALE word:*/
+  letter-spacing: 3px;
+}
+
+/* OR using Pseudo element ::before - in this case, we don't need the paragraph for SALE ih HTML anymore, that's why i commented that in HTML out!*/
+/* article::before {
+  content: "S A L E";
+  background-color: rgb(221, 24, 24);
+  color: #f7f7f7;
+  font-size: 16px;
+  font-weight: bold;
+  display: inline-block;
+  padding: 5px 20px;
+
+  position: absolute;
+  top: -20px;
+  left: -45px;
+} */
+
+.container {
+  border: 5px solid black;
+  width: 825px;
+  margin: 50px auto;
+
+  /*div with class container as Parent of article get the relative position( ATTENTION: <p class="sale">sale</p> is in article, and article is child of div with class container), that's why we have to put below statement here: */
+  position: relative;
+}
+
+.color-blocks {
+  /* height: 50px;
+  width: 25px; */
+  /* padding: 10px; */
+  /* display: block; */
+}
+
+/* what the 6 blocks have as general properties => we bring all of them in one place(.block) together and we don't need to repeat them for every one! */
+.block {
+  /* background-color: black; OR i can put it down in .block-1*/
+  height: 25px; /*used by all of them*/
+  width: 25px; /*used by all of them*/
+  display: inline-block; /* if i comment this statement out, the blocks will be displayed vertically like => display: block, but they should be placed horizontally to occupy the place as they need and they will not create any line-break after them, otherwise every block would be in one line and we don't want that! we want all of them in one line with some distances => display: inline-block;  
+  if i specify only this: display: inline; height and width will not work because in inline mode, height and width will not be applied to inline elements! */
+  /* margin-top: 35px; used by all of them */
+  margin-right: 10px; /*used by all of them*/
+}
+
+.block-1 {
+  background-color: black;
+}
+
+.block-2 {
+  background-color: blue;
+}
+
+.block-3 {
+  background-color: red;
+}
+
+.block-4 {
+  background-color: orange;
+}
+
+.block-5 {
+  background-color: green;
+}
+
+.block-6 {
+  background-color: brown;
+}
+
+h2 {
+  text-align: center;
+  background-color: #f7f7f7;
+  text-transform: uppercase;
+  padding: 20px;
+}
+
+h4 {
+  text-transform: uppercase;
+}
+
+.price {
+  font-weight: 700;
+  font-size: x-large;
+}
+
+.free-shipping {
+  text-transform: uppercase;
+  font-size: small;
+  font-weight: bolder;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+.dress-up {
+  margin-bottom: 7px;
+}
+
+/* .more-info {
+  margin-bottom: 10px; // NOTE: adding a margin-bottom to an ancher will not work because it is an inline element and margin&padding top and bottom don't apply to inline element and also height and width will not apply too! to apply such changes, we have to chnage the display from inline to inline-block. I did that below in a:link, a:visited!
+} */
+
+.product-details {
+  margin-top: 30px; /*because margin-bottom for ancher as inline element doesn't work, unless we change display from inline to inlie-block as i did below in a:link, a:visited*/
+  margin-bottom: 10px;
+}
+
+button {
+  text-transform: uppercase;
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-size: x-large;
+  border-style: none;
+  cursor: pointer;
+  /* width: 825px;*/
+  /* OR */
+  width: 100%;
+  padding: 15px;
+}
+
+button:hover {
+  background-color: white;
+  color: black;
+  border-top: 5px solid black;
+}
+
+/*All four below Pseudo classes: link- visited- hover- active*/
+a:link,
+a:visited {
+  color: black;
+  /* margin-bottom: 30px; This will not work because ancher(a) element is an inline elemnet and margin top and bottom doesn't apply to that! only margin right and left applies to that!  
+  
+  WHAT IS THE SOLUTION:
+  we can change the display from inline to inline-block, after that margin-bottom: 30px; will be applied!
+  */
+  margin-bottom: 30px;
+  display: inline-block;
+}
+
+a:hover,
+a:active {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: square;
+  margin-left: 20px;
+  padding: 5px;
+}

@@ -34,20 +34,23 @@ body {
 
 .chuck-image {
   float: left;
-  /* margin-right: 40px; */
+  margin-right: 39px;
 }
 
 .section {
   float: left;
-  width: 240px;
-  margin-left: 40px;
+  /* [825(total width)-4*2(border width in both sides)-250(image width)-40*2(width in between for two columns)]/2 =  243,5*/
+  width: 243px;
+  /* margin-left: 35px; */
+  margin-right: 39px;
 }
 
 .section-2 {
   float: left;
-  margin-left: 40px;
-  width: 240px;
+  /* margin-left: 40px; */
+  width: 243px;
   margin-top: -15px;
+  /* clear: both; this brings the product details and li left side, which we don't want, that's why i commented it out here!*/
 }
 
 /* OR using Pseudo element ::before - in this case, we don't need the paragraph for SALE ih HTML anymore, that's why i commented that in HTML out!*/
@@ -142,11 +145,11 @@ h4 {
   color: #777;
   margin-bottom: 20px;
   margin-top: 19px;
+  /* float: right; */
 }
 
 .dress-up {
   margin-bottom: 7px;
-  text-wrap: wrap;
 }
 
 /* .more-info {
@@ -201,5 +204,5 @@ ul li {
   list-style: square;
   margin-left: 20px;
   padding: 5px;
-  text-wrap: wrap;
+  /* text-wrap: wrap; */
 }
